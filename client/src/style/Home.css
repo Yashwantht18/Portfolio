@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+.front {
+    font-family: "Roboto Flex", serif;
+    background-color: rgb(28, 33, 28);
+    border: 1px solid rgb(28, 33, 28) !important;
+   
+}
+
+
+.orange-line {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 90px;
+    height: 1.5px;
+    background-color: orange;
+}
+
+
+.textDiv {
+    width: 70%;
+    margin-left: 50px;
+    color: rgb(252, 228, 229) !important;
+}
+
+
+.textDiv .title {
+    margin-top: -5px;
+    font-size: 2rem;
+}
+
+.title {
+    font-weight: 400;
+}
+
+.about {
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.imgDiv img {
+    width: 70%;
+    /* Set image size (adjust based on need) */
+    height: 70%;
+    /* Maintain aspect ratio */
+    border-radius: 10px;
+    /* Optional for rounded corners */
+    object-fit: cover;
+    /* Scale image to fit */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    /* Optional for depth */
+}
+
+.lines {
+    width: 20%;
+    height: 20%;
+    border-top: 1px solid rgb(138, 85, 10);
+    border-bottom: 1px solid rgb(138, 85, 10);
+    transform: translate(-35%, 0);
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    z-index: 0;
+}
+
+.lines:before,
+.lines:after {
+    content: "";
+}
+
+.lines:before,
+.lines:after,
+.lines span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(138, 85, 10);
+    position: absolute;
+    right: 0;
+}
+
+.lines::before {
+    top: 25%;
+}
+
+.lines::after {
+    top: 75%;
+}
+
+.lines span {
+    top: 50%;
+}
+
+@keyframes floatInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframes for the Image (from slight left) */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-30%);
+        /* Start slightly left */
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        /* Move to original position */
+        opacity: 1;
+    }
+}
+
+/* Keyframes for the Text (from the bottom) */
+@keyframes floatInFromBottom {
+    from {
+        transform: translateY(30%);
+        /* Start slightly below */
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        /* Move to original position */
+        opacity: 1;
+    }
+}
+
+/* Keep this in your animations */
+.imgDiv,
+.textDiv {
+    animation-fill-mode: forwards;
+    /* Retain the final animation state */
+    opacity: 1;
+    /* Default state */
+}
+
+/* Image Animation */
+.imgDiv {
+    animation: slideInFromLeft 1.5s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+    /* Initially hidden */
+}
+
+/* Text Animation */
+.textDiv,
+.orange-line {
+    animation: floatInFromBottom 1.5s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+    /* Initially hidden */
+}
+
+@media screen and (max-width: 1600px){
+    .about {
+        font-size: 45px;
+        font-weight: 600;
+    }
+    
+}
+
+@media screen and (max-width: 1200px){
+    .imgDiv img {
+        width: 45%;
+        height: 45%;
+    }
+    .lines {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .about {
+        font-size: 50px;
+        font-weight: 600;
+    }
+
+    .lines {
+        width: 90%;
+    }
+
+    .imgDiv img {
+        width: 55%;
+        height: 55%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .orange-line {
+        top: 35px;
+        left: 0;
+        width: 70px;
+        height: 1.5px;
+    }
+    .about {
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .textDiv .title{
+        font-size: 1.8rem;
+    }
+    .lines{
+        width: 78%;
+        bottom: 10%;
+    }
+}
+
+@media screen and (max-width: 760px){
+    .orange-line {
+        top: 23px;
+        left: 0;
+        width: 60px;
+        height: 1.2px;
+    }
+    .about {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .imgDiv img {
+        width: 50%;
+        height: 50%;
+    }
+    .textDiv .title{
+        font-size: 1.7rem;
+    }
+    
+}
+
+@media screen and (max-width: 500px){
+    .orange-line {
+        top: 23px;
+        left: 0;
+        width: 60px;
+        height: 1.2px;
+    }
+    .about {
+        font-size: 21px;
+        font-weight: 600;
+    }
+    .imgDiv img {
+        width: 55%;
+        height: 55%;
+    }
+    .textDiv .title{
+        font-size: 1.5rem;
+    }
+    .lines {
+        width: 83%;
+        bottom: 13%;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .orange-line {
+        top: 23px;
+        left: 0;
+        width: 55px;
+        height: 1.2px;
+    }
+    .about {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .imgDiv img {
+        width: 52%;
+        height: 52%;
+    }
+    .textDiv .title{
+        font-size: 1.4rem;
+    }
+    .lines {
+        width: 86%;
+        bottom: 15%;
+    }
+}
+
+@media screen and (max-width: 330px){
+    .about {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .imgDiv img {
+        width: 55%;
+        height: 55%;
+    }
+    .textDiv .title{
+        font-size: 1.2rem;
+    }
+    .lines {
+        width: 92%;
+    }
+}
+
+
+/* .s-intro__content-pretitle {
+    margin-bottom: calc(0.125rem * 3.2rem);
+    padding-left: 10rem;
+    color: hsla(39, 93%, 95%, 1);
+    transform: translate(-9.6rem, 0);
+    position: relative;
+}
+
+.text-pretitle {
+    font-family: "Roboto Flex", sans-serif;
+    ;
+    font-size: calc(2rem * 1);
+    line-height: calc(3.2rem * 1);
+    color: hsla(35, 87%, 49%, 1);
+    transform: translate(0.2em, 0);
+    margin-top: 0;
+}
+
+.s-intro__content-text {
+    z-index: 2;
+    grid-column: 1/span 11;
+    margin-top: var(--vspace-1);
+}
+
+.s-intro__content-title {
+    transition-timing-function: cubic-bezier(0.28, 0.12, 0.22, 1);
+    transition-duration: 0.9s;
+    transition-delay: 0s;
+    opacity: 0;
+    transition-property: opacity, transform;
+	transform          : translateY(150px);
+    opacity  : 1;
+	transform: translateY(0);
+    transition-delay: 1.5s;
+
+} */

@@ -1,0 +1,99 @@
+.nav {
+    border-bottom: 0px solid black;
+    background-color: rgb(28, 33, 28);
+}
+
+.section {
+    font-family: "Roboto Flex", serif;
+    font-weight: 600;
+    color: rgb(252, 228, 229) !important;
+    font-size: 40px;
+    letter-spacing: 2px;
+    overflow: hidden;
+    text-align: center;
+    
+}
+.section p{
+    width: 100%;
+    padding-right: 0px !important;
+    padding-top: 15px;
+}
+.mySkills h2 {
+    color: rgb(28, 33, 28);
+}
+
+.row1 {
+    gap: 2rem;
+}
+
+.skill-session{
+    background-color: rgb(248, 241, 242);
+}
+
+.unique-Skill{
+    background-color: rgb(230, 223, 224);
+    border: 1px solid rgb(230, 223, 224);
+}
+
+.unique-Skill h2{
+    font-size: 33px;
+}
+.unique-Skill .row{
+    font-size: 20px;
+}
+
+.skill-div .skill-content{
+    padding-bottom: 35px !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slight upward movement */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skill-session {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@media screen and (max-width:780px){
+    .section{
+        font-size: 30px;
+    }
+    .unique-Skill h2{
+        font-size: 23px;
+    }
+    .unique-Skill .row{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width:460px){
+    .section{
+        font-size: 30px;
+    }
+    .unique-Skill h2{
+        font-size: 23px;
+    }
+    .unique-Skill .row{
+        font-size: 17px;
+    }
+}
+
+
+@media screen and (max-width:330px){
+    .section{
+        font-size: 28px;
+    }
+    .unique-Skill h2{
+        font-size: 20px;
+    }
+    .unique-Skill .row{
+        font-size: 15px;
+    }
+}
