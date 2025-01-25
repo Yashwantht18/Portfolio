@@ -1,5 +1,5 @@
 import '../style/Header.css';
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function Header() {
 
@@ -8,10 +8,8 @@ function Header() {
 
     const handleAboutClick = () => {
         if (location.pathname === "/") {
-            // Scroll to about section if already on home page
             document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
         } else {
-            // Navigate to home and scroll to #about
             navigate("/#about");
             setTimeout(() => {
                 window.location.href = "/#about";
@@ -22,7 +20,8 @@ function Header() {
         <>
             <nav className="navbar navbar-expand-lg nav1">
                 <div className="container-fluid p-3 px-5">
-                    <a className="navbar-brand name fs-3" href="/">Yashwanth.</a>
+                    {/* <a className="navbar-brand name fs-3" href="/">Yashwanth.</a> */}
+                    <Link to="/" className="navbar-brand name fs-3">Yashwanth.</Link>
                     <button className="navbar-toggler bg-transparent border-0 outline-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon text-light border-0 outline-0"></span>
                     </button>
@@ -34,10 +33,12 @@ function Header() {
                                     <a className="nav-link active" aria-current="page" onClick={handleAboutClick} style={{ cursor: "pointer" }}>About</a>
                                 </li>
                                 <li className="nav-item fs-5">
-                                    <a className="nav-link" href="/skills">Skills</a>
+                                    {/* <a className="nav-link" href="/skills">Skills</a> */}
+                                    <Link to="/skills" className='nav-link'>Skills</Link>
                                 </li>
                                 <li className="nav-item fs-5">
-                                    <a className="nav-link" href="/project">Project</a>
+                                    {/* <a className="nav-link" href="/project">Project</a> */}
+                                    <Link to="/project" className='nav-link'>Project</Link>
                                 </li>
                                 <li className="nav-item fs-5">
                                     <a className="nav-link" href="#contact">Contact</a>
