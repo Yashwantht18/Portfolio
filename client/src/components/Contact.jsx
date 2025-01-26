@@ -6,7 +6,7 @@ function Contact() {
             <div className="container">
                 <div className="row">
                     {/* Contact Heading */}
-                    <div className="col-12 col-md-6 mb-4 contact-title ms-2 ms-md-3">
+                    <div className="col-12 col-md-6 mb-4 contact-title ms-md-3">
                         <h1 className="display-4 title">Contact</h1>
                         <hr className="border-light" />
                     </div>
