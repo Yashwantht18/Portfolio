@@ -16,6 +16,16 @@ function Header() {
             }, 0);
         }
     };
+
+    const handleDownload = ()=> {
+        const pdf = "/Yashwanth_Resume.pdf"
+        const link = document.createElement("a");
+        link.href = pdf;
+        link.download = "Yashwanth_Resume.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link)
+    }
     return (
         <>
             <nav className="navbar navbar-expand-lg nav1">
@@ -50,7 +60,10 @@ function Header() {
                         </ul>
                         <div className='ms-auto text-lg-end text-center w-100 mt-3 mt-lg-0 '>
                             <li>
-                                <button className='btn btn-lg-lg btn-warning'>
+                                {/* <a href="../public/Yashwanth_Resume.pdf" download={} className='btn btn-lg-lg btn-warning'>
+                                    Download CV
+                                </a> */}
+                                <button className='btn btn-lg-lg btn-warning' onClick={handleDownload}>
                                     Download CV
                                 </button>
                             </li>
