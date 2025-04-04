@@ -63,9 +63,10 @@ function Header() {
                                 {/* <a href="../public/Yashwanth_Resume.pdf" download={} className='btn btn-lg-lg btn-warning'>
                                     Download CV
                                 </a> */}
-                                <button href="/Yashwanth_Resume.pdf" className='btn btn-lg-lg btn-warning' >
-                                    Download CV
-                                </button>
+                                <a href="/Yashwanth_Resume.pdf" download className='btn btn-lg-lg btn-warning'>
+                                   Download CV
+                                </a>
+
                             </li>
                         </div>
                     </div>
