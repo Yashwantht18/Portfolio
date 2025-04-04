@@ -13,7 +13,7 @@ function Project() {
                             <div className="row p-md-3 p-2">
                                 <div className="col-12 align-content-start title">
                                     <span>RentEasee-Yukthi Innovation Challenge 2024 - <a className="nav-link active" href='https://www.linkedin.com/posts/yashwanththangaraj_we-are-excited-to-introduce-the-renteasee-activity-7242023467464728577-GFym/?utm_source=share&utm_medium=member_desktop' >LinkedIn</a> | <a className="nav-link active" href="https://github.com/Poovarasan-29/RentEaseeRepo">GitHub</a></span>
-                                    <p>Team Project | On goning</p>
+                                    <p>Team Project | On going</p>
                                 </div>
                                 <div className="col-12">
                                     <ul className='title-Des'>
